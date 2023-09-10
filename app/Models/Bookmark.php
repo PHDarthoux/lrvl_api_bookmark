@@ -9,6 +9,8 @@ class Bookmark extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['link'];
+
     /**
      * Get the picture associated with the bookmark (if exist ->optional).
      */

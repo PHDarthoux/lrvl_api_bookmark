@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\BookmarkController;
+use App\Http\Controllers\Api\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,6 @@ Dans le cas de cette API il n'y aura pas d'authentification.
 //     return $request->user();
 // });
 
-Route::get('/', BookmarkController::class);
+Route::apiResource('/bookmarks', BookmarkController::class);
+
+Route::get('/', HomeController::class);
